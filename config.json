@@ -1,35 +1,16 @@
 {
-  "log": {
-    "loglevel": "warning",
-    "access": "/dev/stdout",
-    "error": "/dev/stdout"
-  },
-  "inbounds": [
-    {
-      "port": 443,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "ваш-uuid-здесь",
-            "flow": ""
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/ray"
-        }
-      }
+  "inbounds": [{
+    "port": 443,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{"id": "c852a95b-417b-47dd-890a-59904a63f714"}],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "security": "none",
+      "wsSettings": {"path": "/vless"}
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "tag": "direct"
-    }
-  ]
+  }],
+  "outbounds": [{"protocol": "freedom"}]
 }
